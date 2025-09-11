@@ -116,14 +116,14 @@ header {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 60px;
-  padding: 0px 0px 0px;
+  gap: 30px;
+  padding: 20px;
 }
 
 .footer-col {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 6px;
 }
 
 .footer-logo {
@@ -144,9 +144,17 @@ header {
 
 .footer-credits {
   text-align: center;
-  padding: 8px 16px 24px;
+  padding: 4px 16px 12px;
   font-size: 14px;
   color: #000;
+}
+
+.footer-git {
+  height: 60px;
+  object-fit: contain;
+  align-self: flex-start;
+  margin-top: 0;
+  display: block;
 }
 
 /* Dropdown GitHub actuel */
