@@ -141,22 +141,9 @@ section:nth-child(2) {
     }
 }
 
-/* FORMULAIRE DE CONTACT */
 
-.form-section {
-    background-color: #02172d;
-    border-radius: 15px;
-    padding: 30px;
-    margin: 50px 20px;
-    box-shadow: 0 10px 30px rgba(245, 244, 244, 0.2);
-    color: white;
-}
+/* SECTION VIDEO */
 
-.form-section h2 {
-    color: #ffffff;
-    font-weight: bold;
-    font-size: 2em;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    text-align: center;
-}
+
+
+/* SECTION TABLEAU */
