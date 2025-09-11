@@ -27,7 +27,6 @@ header {
   align-items: flex-start;
   justify-content: flex-start;
   gap: 200px;
-  padding: 20px 16px 16px 16px;
 }
 
 .header-main {
@@ -48,7 +47,7 @@ header {
 }
 
 .header-logo {
-  height: 160px;
+  height: 180px;
 }
 
 .header-title {
