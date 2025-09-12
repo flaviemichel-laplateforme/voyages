@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/autriche.css">
+    <title>Autriche</title>
+</head>
+ <header>
+    <div class="header-content">
+      <img src="../assets/images/voyages.png" alt="Logo Super Voyage" class="header-logo">
+      <div class="header-main">
+        <div class="header-title">SUPER VOYAGE</div>
+        <div class="header-buttons">
+          <div class="dropdown-group">
+            <button class="menu-btn" id="continentBtn">Continents</button>
+            <div class="menu-dropdown" id="continentMenu">
+              <a href="#">Cananda</a>
+              <a href="#">Autriche</a>
+              <a href="#">Hong Kong</a>
+              <a href="#">Nouvelle-Zelande</a>
+              <a href="#">Algerie</a>
+            </div>
+          </div>
+          <div class="dropdown-group">
+            <button class="menu-btn" id="membreBtn">Membres</button>
+            <div class="menu-dropdown" id="membreMenu">
+              <a href="#">Dgino</a>
+              <a href="#">Malo</a>
+              <a href="#">Remy</a>
+              <a href="#">Flavie</a>
+              <a href="#">Sofian</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+<!-- <hr class="header-separator"> -->
+<body>
+    <div class="cities">
+        <div class="city-info">
+            <h2>Les villes Autrichiennes</h2>
+            <p>Entre histoire, culture et paysages à couper le souffle, du berceau de Mozart aux villages nichés au coeur des Alpes, venez découvrir les merveilles de l'Autriche.</p>
+        </div>
+        <div class="carousel cities-carousel">
+            <input type="radio" name="cities-carousel" id="city1" checked>
+            <input type="radio" name="cities-carousel" id="city2">
+            <input type="radio" name="cities-carousel" id="city3">
+            <input type="radio" name="cities-carousel" id="city4">
+            <div class="slides">
+                <div class="slide s1"><img src="../assets/images/vienna.jpg" alt="Vienne"></div>
+                <div class="slide s2"><img src="../assets/images/salzburg.webp" alt="Salzbourg"></div>
+                <div class="slide s3"><img src="../assets/images/innsbruck.webp" alt="Innsbruck"></div>
+                <div class="slide s4"><img src="../assets/images/hallstatt.jpg" alt="Hallstatt"></div>
+            </div>
+            <div class="navigation">
+                <label for="city1"></label>
+                <label for="city2"></label>
+                <label for="city3"></label>
+                <label for="city4"></label>
+            </div>
+        </div>
+    </div>
+
+    <div class="culture">
+        <div class="carousel culture-carousel">
+            <input type="radio" name="culture-carousel" id="culture1" checked>
+            <input type="radio" name="culture-carousel" id="culture2">
+            <input type="radio" name="culture-carousel" id="culture3">
+            <input type="radio" name="culture-carousel" id="culture4">
+            <div class="slides">
+                <div class="slide c1"><img src="../assets/images/music.webp" alt="Musique classique"></div>
+                <div class="slide c2"><img src="../assets/images/strudel.webp" alt="Strudel"></div>
+                <div class="slide c3"><img src="../assets/images/wiener.jpg" alt="Gastronomie viennoise"></div>
+                <div class="slide c4"><img src="../assets/images/dance.jpg" alt="Danse / valse"></div>
+            </div>
+            <div class="navigation">
+                <label for="culture1"></label>
+                <label for="culture2"></label>
+                <label for="culture3"></label>
+                <label for="culture4"></label>
+            </div>
+        </div>
+        <div class="culture-info">
+            <h2>La culture Autrichienne</h2>
+            <p>L’Autriche conjugue musique, gastronomie et traditions vivantes : des salles de concert de Vienne aux cafés feutrés, des pâtisseries raffinées aux plats alpins. Entre opéra, valse, strudel et ambiance chaleureuse, explorez une identité culturelle riche et accueillante.</p>
+        </div>
+    </div>
+
+    <section class="contact">
+        <h2>Contact</h2>
+        <p>Une question sur votre futur voyage en Autriche ? Écrivez-nous.</p>
+        <form class="contact-form" action="#" method="post">
+            <div class="field-group">
+                <label for="name">Nom</label>
+                <input type="text" id="name" name="name" required placeholder="Votre nom">
+            </div>
+            <div class="field-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="vous@example.com">
+            </div>
+            <div class="field-group full">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required placeholder="Votre message..."></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Envoyer</button>
+        </form>
+    </section>
+    <footer class="site-footer" style="margin-top: 200px;">
+  <div class="footer-wrapper flex-layout">
+    <div class="footer-col github dropdown">
+      <div>
+        <img class="footer-git" src="../assets/images/github.png" alt="Logo git" />
+        <a href="#">Dgino</a>
+        <a href="#">Sofian</a>
+        <a href="#">Malo</a>
+        <a href="#">Flavie</a>
+        <a href="#">Remy</a>
+      </div>
+    </div>
+    <div class="footer-col footer-center">
+      <img class="footer-logo" src="../assets/images/voyages.png" alt="Logo Footer" />
+    </div>
+    <div>
+      <p>Pages</p>
+      <a href="#">Lien 1</a>
+      <a href="#">Lien 2</a>
+      <a href="#">Lien 3</a>
+      <a href="#">Lien 4</a>
+      <a href="#">Lien 5</a>
+    </div>
+  </div>
+  </div>
+  <div class="footer-credits">© 2025 Super-Voyage — Explorez le monde avec nous.</div>
+</footer>
+</body>
+</html>
