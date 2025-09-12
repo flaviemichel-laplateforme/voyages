@@ -142,7 +142,38 @@ section:nth-child(2) {
 }
 
 
-/* SECTION VIDEO */
+
+/* SECTION REVENUS ET BIEN-ÊTRE */
+
+.revenu-bien-etre {
+
+    border-radius: 15px;
+    padding: 40px;
+    margin: 50px auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 100%;
+}
+
+.revenu-bien-etre h2 {
+    color: #ffffff;
+    font-size: 2em;
+    margin-bottom: 25px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+    font-weight: bold;
+}
+
+.revenu-bien-etre p {
+    color: #ffffff;
+    font-size: 1.2em;
+    line-height: 1.7;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-align: justify;
+    padding: 0 20px;
+}
+
+
 
 
 
