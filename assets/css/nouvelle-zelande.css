@@ -399,6 +399,19 @@ img:hover {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
+/* Désactiver le hover pour les logos du footer */
+.footer-git:hover,
+.footer-logo:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+/* Désactiver le cursor pointer pour les images du footer */
+.footer-git,
+.footer-logo {
+    cursor: default;
+}
+
 /* ANCRES NAVIGATION */
 
 .container2 a,
@@ -547,4 +560,308 @@ img:hover {
 
 .sectionTableau2 button:hover {
     background-color: #a82810;
+}
+
+
+/******************** FOOTER ************************/
+.site-footer {
+    background-color: #1976d2;
+    margin-top: 40px;
+    border-top: 4px solid #000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.footer-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 20px;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.footer-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.footer-logo {
+    width: 200px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    filter: brightness(0) saturate(100%) invert(85%) sepia(95%) saturate(2000%) hue-rotate(355deg) brightness(85%) contrast(95%);
+}
+
+.footer-col .title {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.footer-col .links {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* Liens du footer en deux colonnes */
+.footer-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px 15px;
+    align-items: start;
+}
+
+.footer-links p {
+    grid-column: 1 / -1;
+    margin: 0 0 10px 0;
+    font-weight: bold;
+    font-size: 29px;
+    color: #FFD700;
+    text-align: center;
+}
+
+.footer-links a {
+    font-size: 15px;
+    font-weight: bold;
+    color: #24292e;
+    text-decoration: none;
+    padding: 5px 8px;
+    border-radius: 6px;
+    background: #f6f8fa;
+    border: 1px solid #d0d7de;
+    transition: all 0.2s ease;
+    text-align: center;
+    min-width: 70px;
+}
+
+.footer-links a:hover {
+    background: #ff0000;
+    color: #eeff00;
+    border-color: #24292e;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(36, 41, 46, 0.2);
+}
+
+.footer-credits {
+    text-align: center;
+    padding: 4px 16px 12px;
+    font-size: 17px;
+    font-weight: bold;
+    color: #FFD700;
+}
+
+.footer-git {
+    height: 50px;
+    object-fit: contain;
+    align-self: flex-start;
+    margin-top: 0;
+    display: block;
+    filter: brightness(0) saturate(100%) invert(85%) sepia(95%) saturate(2000%) hue-rotate(355deg) brightness(85%) contrast(95%);
+}
+
+/* Section GitHub */
+.github {
+    align-items: flex-start;
+}
+
+.github div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 10px;
+    align-items: center;
+    max-width: 200px;
+}
+
+.github .footer-git {
+    grid-column: 1 / -1;
+    justify-self: center;
+    margin-bottom: 5px;
+}
+
+.github a {
+    font-size: 15px;
+    font-weight: bold;
+    color: #24292e;
+    text-decoration: none;
+    padding: 5px 8px;
+    border-radius: 6px;
+    background: #f6f8fa;
+    border: 1px solid #d0d7de;
+    transition: all 0.2s ease;
+    text-align: center;
+    min-width: 70px;
+}
+
+.github a:hover {
+    background: #ff0000;
+    color: #eeff00;
+    border-color: #24292e;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(36, 41, 46, 0.2);
+}
+
+/* Centrer le 5ème lien (Remy) */
+.github a:nth-child(6) {
+    grid-column: 1 / -1;
+    justify-self: center;
+}
+
+/* Dropdown GitHub actuel */
+.footer-dropdown-btn {
+    background: #ac9bea;
+    border: none;
+    border-radius: 14px;
+    padding: 10px 24px;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .15);
+}
+
+.footer-wrapper .dropdown {
+    position: relative;
+}
+
+.footer-dropdown-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 8px 0;
+    width: 180px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .15);
+    animation: fadeIn .25s ease;
+    z-index: 20;
+}
+
+.footer-dropdown-menu a {
+    display: block;
+    padding: 10px 16px;
+    font-size: 16px;
+    color: #1976d2;
+    text-decoration: none;
+}
+
+.footer-dropdown-menu a:hover {
+    background: #e3f6fc;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== Contenu principal centré ===== */
+.main-centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+    padding: 60px 20px 40px;
+}
+
+.content-box {
+    background: rgba(230, 230, 230, 0.9);
+    border: 2px solid #bcbcbc;
+    border-radius: 18px;
+    padding: 40px 50px;
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(2px);
+}
+
+.content-box h1 {
+    margin-top: 0;
+    font-size: 48px;
+    color: #1976d2;
+    letter-spacing: 1px;
+}
+
+.content-box p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #222;
+}
+
+.hk-flag {
+    max-width: 120px;
+    width: 100%;
+    height: auto;
+    margin: 0 16px 0 0;
+    display: block;
+}
+
+.flag-title {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 16px 0 24px;
+    text-align: left;
+}
+
+.flag-title h3 {
+    font-size: 42px;
+    margin: 0;
+    color: #1c3b54;
+    letter-spacing: 1px;
+}
+
+/* Cartes d'informations */
+.info-grid {
+    margin-top: 30px;
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.info-card {
+    background: #ffffff;
+    border: 1px solid #d3d3d3;
+    border-radius: 14px;
+    padding: 18px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: transform .25s, box-shadow .25s;
+}
+
+.info-card h2 {
+    margin: 0 0 8px;
+    font-size: 20px;
+    color: #1976d2;
+    letter-spacing: .5px;
+}
+
+.info-card p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.info-card .sub {
+    font-size: 12px;
+    color: #555;
+}
+
+.info-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
 }
