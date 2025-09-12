@@ -146,4 +146,93 @@ section:nth-child(2) {
 
 
 
-/* SECTION TABLEAU */
+/* SECTION FORMULAIRE */
+
+.sectionTableau {
+    display: flex;
+    flex-direction: column;
+    background-image: url('../images/drapeaunouvellezelande.jpg');
+    border-radius: 15px;
+    padding: 40px;
+    margin: 50px auto;
+    color: white;
+    text-align: left;
+    margin-bottom: 30px;
+    font-size: 1em;
+    color: #dee3eb;
+    width: 50%;
+}
+
+.sectionTableau table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.sectionTableau table th,
+.sectionTableau table td {
+    border: 2px solid #ffffff;
+    padding: 12px;
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.sectionTableau table th {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.sectionTableau label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.6);
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+.sectionTableau h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: white;
+    border-radius: 25px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px 20px;
+}
+
+.sectionTableau p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.6);
+    padding: 12px 15px;
+}
+
+.sectionTableau input,
+.sectionTableau textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.sectionTableau button {
+    background-color: #d13017;
+    color: white;
+    border-color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.3em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
