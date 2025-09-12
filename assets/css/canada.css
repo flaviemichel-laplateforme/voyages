@@ -1,0 +1,45 @@
+.flag {
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    width: 150px;
+    justify-content: space-around;
+    margin-left: 70px;
+
+}
+
+.stats-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+    border: 1px solid black;
+    transition: opacity 0.5s ease;
+    background-color: white;
+    mask-image: linear-gradient(to right, black 10%, transparent);
+    -webkit-mask-image: linear-gradient(to top, black 70%, transparent);
+}
+
+.text-box {
+    display: flex;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.list-box {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.contact-box {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid black;
+}
