@@ -565,7 +565,7 @@ img:hover {
 
 /******************** FOOTER ************************/
 .site-footer {
-    background-color: #1976d2;
+    background: linear-gradient(110deg, #1a4968, #0f2d42 40%, #1a4968 75%);
     margin-top: 40px;
     border-top: 4px solid #000;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -595,11 +595,12 @@ img:hover {
 }
 
 .footer-logo {
-    width: 200px;
+    width: 250px;
     height: auto;
     object-fit: contain;
     display: block;
-    filter: brightness(0) saturate(100%) invert(85%) sepia(95%) saturate(2000%) hue-rotate(355deg) brightness(85%) contrast(95%);
+    padding-left: 40px;
+    filter: brightness(0) saturate(100%) invert(87%) sepia(89%) saturate(1500%) hue-rotate(345deg) brightness(90%) contrast(98%);
 }
 
 .footer-col .title {
@@ -625,7 +626,7 @@ img:hover {
     margin: 0 0 10px 0;
     font-weight: bold;
     font-size: 29px;
-    color: #FFD700;
+    color: rgb(236, 217, 15);
     text-align: center;
 }
 
@@ -656,7 +657,9 @@ img:hover {
     padding: 4px 16px 12px;
     font-size: 17px;
     font-weight: bold;
-    color: #FFD700;
+    color: rgb(236, 217, 15);
+    margin: 20px auto 0;
+    max-width: 400px;
 }
 
 .footer-git {
@@ -665,7 +668,7 @@ img:hover {
     align-self: flex-start;
     margin-top: 0;
     display: block;
-    filter: brightness(0) saturate(100%) invert(85%) sepia(95%) saturate(2000%) hue-rotate(355deg) brightness(85%) contrast(95%);
+    filter: brightness(0) saturate(100%) invert(87%) sepia(89%) saturate(1500%) hue-rotate(345deg) brightness(90%) contrast(98%);
 }
 
 /* Section GitHub */
