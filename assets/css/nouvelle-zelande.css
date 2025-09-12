@@ -654,11 +654,11 @@ img:hover {
 
 .footer-credits {
     text-align: center;
-    padding: 4px 16px 12px;
+    padding: 16px 16px 12px;
+    margin-right: 65px;
     font-size: 17px;
     font-weight: bold;
     color: rgb(236, 217, 15);
-    margin: 20px auto 0;
     white-space: nowrap;
 }
 
