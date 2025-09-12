@@ -149,14 +149,14 @@ section:nth-child(2) {
 
     border-radius: 15px;
     padding: 40px;
-    margin: 50px auto;
+    margin: 50px 30px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     text-align: center;
-    width: 100%;
+    max-width: calc(100% - 60px);
 }
 
 .revenu-bien-etre h2 {
-    color: #ffffff;
+    color: #0e0e0e;
     font-size: 2em;
     margin-bottom: 25px;
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
@@ -164,18 +164,132 @@ section:nth-child(2) {
 }
 
 .revenu-bien-etre p {
-    color: #ffffff;
+    color: #000000;
     font-size: 1.2em;
     line-height: 1.7;
     margin: 0;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    text-align: justify;
+    text-align: center;
     padding: 0 20px;
 }
 
+/* SECTION GASTRONOMIE LOCALE */
+.gastronomie-locale {
 
+    border-radius: 15px;
+    padding: 40px;
+    margin: 50px 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: calc(100% - 60px);
+}
 
+.gastronomie-locale h2 {
+    color: #111010;
+    font-size: 2em;
+    margin-bottom: 25px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+    font-weight: bold;
+}
 
+.gastronomie-locale p {
+    color: #181616;
+    font-size: 1.2em;
+    line-height: 1.7;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    padding: 0 20px;
+}
+
+/* SECTION MILFORD SOUND */
+.milford-sound {
+
+    border-radius: 15px;
+    padding: 40px;
+    margin: 50px 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: calc(100% - 60px);
+}
+
+.milford-sound h2 {
+    color: #111010;
+    font-size: 2em;
+    margin-bottom: 25px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+    font-weight: bold;
+}
+
+.milford-sound p {
+    color: #181616;
+    font-size: 1.2em;
+    line-height: 1.7;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    padding: 0 20px;
+}
+
+/* MAORIE CULTURE */
+
+.maorie-culture {
+
+    border-radius: 15px;
+    padding: 40px;
+    margin: 50px 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: calc(100% - 60px);
+}
+
+.maorie-culture h2 {
+    color: #111010;
+    font-size: 2em;
+    margin-bottom: 25px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+    font-weight: bold;
+}
+
+.maorie-culture p {
+    color: #181616;
+    font-size: 1.2em;
+    line-height: 1.7;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    padding: 0 20px;
+}
+
+/* ACTIVITES */
+
+.activites {
+
+    border-radius: 15px;
+    padding: 40px;
+    margin: 50px 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: calc(100% - 60px);
+}
+
+.activites h2 {
+    color: #111010;
+    font-size: 2em;
+    margin-bottom: 25px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+    font-weight: bold;
+}
+
+.activites p {
+    color: #181616;
+    font-size: 1.2em;
+    line-height: 1.7;
+    margin: 50px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    padding: 0 20px;
+}
 
 /* SECTION FORMULAIRE */
 
@@ -187,11 +301,12 @@ section:nth-child(2) {
     padding: 40px;
     margin: 50px auto;
     color: white;
-    text-align: left;
+    text-align: center;
     margin-bottom: 30px;
     font-size: 1em;
     color: #dee3eb;
-    width: 50%;
+    width: 70%;
+    max-width: 800px;
 }
 
 .sectionTableau table {
@@ -203,15 +318,18 @@ section:nth-child(2) {
 .sectionTableau table th,
 .sectionTableau table td {
     border: 2px solid #ffffff;
-    padding: 12px;
+    padding: 15px;
     text-align: center;
     color: white;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.5);
+    font-weight: bold;
 }
 
 .sectionTableau table th {
     font-weight: bold;
-    font-size: 1.1em;
+    font-size: 1.2em;
+    background: rgba(0, 0, 0, 0.7);
 }
 
 .sectionTableau label {
@@ -266,4 +384,113 @@ section:nth-child(2) {
     font-size: 1.3em;
     cursor: pointer;
     transition: background-color 0.3s ease;
+}
+
+/* HOVER ZOOM POUR LES IMAGES */
+
+img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* SECTION FORMULAIRE */
+
+.sectionTableau2 {
+    display: flex;
+    flex-direction: column;
+    background-image: url('../images/drapeaunouvellezelande.jpg');
+    border-radius: 15px;
+    padding: 25px;
+    margin: 40px auto;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1em;
+    color: #dee3eb;
+    width: 50%;
+    max-width: 500px;
+}
+
+.sectionTableau2 table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.sectionTableau2 table th,
+.sectionTableau2 table td {
+    border: 2px solid #ffffff;
+    padding: 12px;
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.sectionTableau2 table th {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.sectionTableau2 label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.6);
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+.sectionTableau2 h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 1.8em;
+    color: white;
+    border-radius: 25px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.7);
+    padding: 12px 15px;
+}
+
+.sectionTableau2 p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px 12px;
+}
+
+.sectionTableau2 input,
+.sectionTableau2 textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+.sectionTableau2 button {
+    background-color: #d13017;
+    color: white;
+    border-color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.sectionTableau2 button:hover {
+    background-color: #a82810;
 }
