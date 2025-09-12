@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Accueil</title>
+</head>
+<body>
+    <header></header>
+    <main>
+        <section class="relative bg-white">
+            <div class="relative h-80 overflow-hidden">
+                <img class="absolute inset-0 h-full w-full object-cover" src="/assets/images/hero_monde.jpg" alt="Hero Image">
+                <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                    <h1 class="text-white text-4xl font-bold">Découvrez le monde !</h1>
+                </div>
+            </div> 
+        </section>
+        
+        <!-- Introduction complète -->
+        <section>
+            <div class="max-w-4xl mx-auto my-12 px-4 text-center">
+                <h2 class="text-3xl font-bold mb-6">Bienvenue sur notre site de voyages</h2>
+                <p class="text-lg text-gray-700 mb-4">Explorez des destinations fascinantes à travers le monde avec nous. Que vous soyez amateur de nature, passionné d'histoire ou curieux de nouvelles cultures, nous avons quelque chose pour vous.</p>
+                <p class="text-lg text-gray-700">Parcourez nos articles détaillés sur des pays comme le Canada, l'Algérie, la Nouvelle-Zélande, l'Autriche et Hong-Kong. Découvrez les meilleures attractions, conseils de voyage et expériences uniques qui rendront votre aventure inoubliable.</p>
+            </div>
+        </section>
+
+        <section class="py-12 bg-white">
+            <h3 class="text-2xl font-semibold mb-6 text-center">Mini-présentation des pays</h3>
+            <div class="flex flex-wrap justify-center lg:justify-around gap-6">
+                <article class="bg-white rounded-xl shadow p-5 w-full sm:w-80 text-center">
+                    <div class="h-40 w-full bg-gray-200 rounded-md overflow-hidden mb-4 flex items-center justify-center text-gray-400">
+                        <img src="/assets/images/canada.jpeg" alt="Canada" class="w-full h-full object-cover" loading="lazy">
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Canada</h4>
+                    <p class="text-gray-600 mb-3">Pays vaste et multiculturel, connu pour ses paysages naturels (forêts, lacs, montagnes) et ses villes cosmopolites comme Toronto et Montréal.</p>
+                    <p class="text-sm font-medium text-gray-700">Capitale : Ottawa</p>
+                </article>
+
+                <article class="bg-white rounded-xl shadow p-5 w-full sm:w-80 text-center">
+                    <div class="h-40 w-full bg-gray-200 rounded-md overflow-hidden mb-4 flex items-center justify-center text-gray-400">
+                        <img src="/assets/images/algerie.jpg" alt="Algérie" class="w-full h-full object-cover" loading="lazy">
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Algérie</h4>
+                    <p class="text-gray-600 mb-3">Grand pays d'Afrique du Nord, riche en histoire, avec le Sahara, des littoraux méditerranéens et une culture culinaire et musicale forte.</p>
+                    <p class="text-sm font-medium text-gray-700">Capitale : Alger</p>
+                </article>
+
+                <article class="bg-white rounded-xl shadow p-5 w-full sm:w-80 text-center">
+                    <div class="h-40 w-full bg-gray-200 rounded-md overflow-hidden mb-4 flex items-center justify-center text-gray-400">
+                        <img src="/assets/images/nouvelle-zelande.jpg" alt="Nouvelle-Zélande" class="w-full h-full object-cover" loading="lazy">
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Nouvelle-Zélande</h4>
+                    <p class="text-gray-600 mb-3">Archipel au sud-ouest de l'océan Pacifique, réputé pour ses paysages dramatiques, sa biodiversité unique et sa culture maorie vivante.</p>
+                    <p class="text-sm font-medium text-gray-700">Capitale : Wellington</p>
+                </article>
+
+                <article class="bg-white rounded-xl shadow p-5 w-full sm:w-80 text-center">
+                    <div class="h-40 w-full bg-gray-200 rounded-md overflow-hidden mb-4 flex items-center justify-center text-gray-400">
+                        <img src="/assets/images/autriche.webp" alt="Autriche" class="w-full h-full object-cover" loading="lazy">
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Autriche</h4>
+                    <p class="text-gray-600 mb-3">Pays alpin d'Europe centrale, célèbre pour ses paysages montagneux, sa culture musicale (Mozart, Vienne) et ses villes historiques comme Vienne et Salzbourg.</p>
+                    <p class="text-sm font-medium text-gray-700">Capitale : Vienne</p>
+                </article>
+
+                <article class="bg-white rounded-xl shadow p-5 w-full sm:w-80 text-center">
+                    <div class="h-40 w-full bg-gray-200 rounded-md overflow-hidden mb-4 flex items-center justify-center text-gray-400">
+                        <img src="/assets/images/hong-kong.jpg" alt="Hong Kong" class="w-full h-full object-cover" loading="lazy">
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Hong-Kong</h4>
+                    <p class="text-gray-600 mb-3">Mégalopole dynamique et portuaire, mélange de gratte-ciel modernes, culture chinoise et héritage colonial, célèbre pour sa gastronomie et son port.</p>
+                    <p class="text-sm font-medium text-gray-700">Région administrative spéciale</p>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+</html>
