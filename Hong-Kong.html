@@ -68,8 +68,208 @@
         du
         Guangdong. Avec Macao à l'ouest et Guangzhou au nord-ouest, elle forme un triangle dans le delta de la rivière
         des perles.</p>
+
+      <!-- Section Photos -->
+      <div class="photo-gallery">
+        <div class="photo-item">
+          <img src="img/hong-kong-1.jpg" alt="Vue de Hong Kong" class="gallery-image">
+          <p class="photo-caption">Skyline de Hong Kong</p>
+        </div>
+        <div class="photo-item">
+          <img src="img/hong-kong-2.jpg" alt="Port de Hong Kong" class="gallery-image">
+          <p class="photo-caption">Port Victoria</p>
+        </div>
+        <div class="photo-item">
+          <img src="img/hong-kong-3.jpg" alt="Rue de Hong Kong" class="gallery-image">
+          <p class="photo-caption">Quartier traditionnel</p>
+        </div>
+      </div>
+
     </div>
+
   </main>
+
+  <!-- Section Formulaire -->
+  <section class="form-section">
+    <div class="form-container">
+      <h3>Rejoignez Le Voyage de vos rêves !</h3>
+      <form action="/ma-page-de-traitement" method="post" class="signup-form" novalidate>
+
+        <div class="form-row">
+          <div class="form-row">
+            <label for="name" class="form-label">Identifiant</label>
+            <input type="text" id="name" name="user_name" class="form-field" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <label for="mp" class="form-label">Mot de passe</label>
+          <input type="password" id="mp" name="user_mp" class="form-field" required>
+        </div>
+        <!--date de naissance-->
+        <div class="form-row dob-row">
+          <label for="birth-day" class="form-label">Date de naissance</label>
+          <div class="dob-inline">
+            <select id="birth-day" class="form-field" required>
+              <option value="">Jour</option>
+              <option>01</option>
+              <option>02</option>
+              <option>03</option>
+              <option>04</option>
+              <option>05</option>
+              <option>06</option>
+              <option>07</option>
+              <option>08</option>
+              <option>09</option>
+              <option>10</option>
+              <option>11</option>
+              <option>12</option>
+              <option>13</option>
+              <option>14</option>
+              <option>15</option>
+              <option>16</option>
+              <option>17</option>
+              <option>18</option>
+              <option>19</option>
+              <option>20</option>
+              <option>21</option>
+              <option>22</option>
+              <option>23</option>
+              <option>24</option>
+              <option>25</option>
+              <option>26</option>
+              <option>27</option>
+              <option>28</option>
+              <option>29</option>
+              <option>30</option>
+              <option>31</option>
+            </select>
+            <select id="birth-month" class="form-field" required>
+              <option value="">Mois</option>
+              <option value="01">Janvier</option>
+              <option value="02">Février</option>
+              <option value="03">Mars</option>
+              <option value="04">Avril</option>
+              <option value="05">Mai</option>
+              <option value="06">Juin</option>
+              <option value="07">Juillet</option>
+              <option value="08">Août</option>
+              <option value="09">Septembre</option>
+              <option value="10">Octobre</option>
+              <option value="11">Novembre</option>
+              <option value="12">Décembre</option>
+            </select>
+            <select id="birth-year" class="form-field" required>
+              <option value="">année</option>
+              <option>2025</option>
+              <option>2024</option>
+              <option>2023</option>
+              <option>2022</option>
+              <option>2021</option>
+              <option>2020</option>
+              <option>2019</option>
+              <option>2018</option>
+              <option>2017</option>
+              <option>2016</option>
+              <option>2015</option>
+              <option>2014</option>
+              <option>2013</option>
+              <option>2012</option>
+              <option>2011</option>
+              <option>2010</option>
+              <option>2009</option>
+              <option>2008</option>
+              <option>2007</option>
+              <option>2006</option>
+              <option>2005</option>
+              <option>2004</option>
+              <option>2003</option>
+              <option>2002</option>
+              <option>2001</option>
+              <option>2000</option>
+              <option>1999</option>
+              <option>1998</option>
+              <option>1997</option>
+              <option>1996</option>
+              <option>1995</option>
+              <option>1994</option>
+              <option>1993</option>
+              <option>1992</option>
+              <option>1991</option>
+              <option>1990</option>
+              <option>1989</option>
+              <option>1988</option>
+              <option>1987</option>
+              <option>1986</option>
+              <option>1985</option>
+              <option>1984</option>
+              <option>1983</option>
+              <option>1982</option>
+              <option>1981</option>
+              <option>1980</option>
+              <option>1979</option>
+              <option>1978</option>
+              <option>1977</option>
+              <option>1976</option>
+              <option>1975</option>
+              <option>1974</option>
+              <option>1973</option>
+              <option>1972</option>
+              <option>1971</option>
+              <option>1970</option>
+            </select>
+            <input type="hidden" name="user_date" id="user_date_hidden" />
+          </div>
+        </div>
+        <!--fin date de naissance-->
+        <!--numéro de téléphone-->
+        <div class="form-row phone-row" id="phone-row">
+          <label for="phone" class="form-label">Numéro de téléphone</label>
+          <div class="phone-inline">
+            <select name="phone_country" id="phone-country" class="form-field">
+              <option value="+33">France (+33)</option>
+              <option value="+1">États-Unis (+1)</option>
+              <option value="+44">Royaume-Uni (+44)</option>
+            </select>
+            <input type="tel" id="phone-input" name="phone" class="form-field" placeholder=""
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+          </div>
+        </div>
+        <div class="form-row email-row hidden" id="email-row">
+          <label for="email-alt" class="form-label">Adresse e-mail</label>
+          <input type="email" id="email-alt" name="user_email_alt" class="form-field" placeholder="">
+        </div>
+        <!--fin numéro de téléphone-->
+
+
+        <div class="form-row note-row">
+          <p id="phone-info">Voyage pourra utiliser votre numéro de téléphone pour vous
+            appeler ou
+            vous envoyer des SMS afin de vous transmettre des informations sur votre
+            compte</p>
+          <p id="email-info" class="hidden">
+            <br><label style="font-weight: normal; text-transform:none;">
+              <input type="checkbox" name="optin_news" value="yes"> Je souhaite recevoir des
+              e-mails de Voyage contenant des actualités, des offres et des événements.
+              (Interrompez à tout moment dans les Paramètres.).
+            </label>
+            <br><br>
+          </p>
+          <p>En cliquant sur S'inscrire, vous acceptez les Conditions d'utilisation de
+            Voyage et vous confirmez avoir lu notre Avis de confidentialité ainsi que les
+            informations sur le Droit de Rétractation des Consommateurs de l'UE, de l'EEE et
+            du Royaume-Uni.
+          </p>
+        </div>
+        <div class="form-row submit-row">
+          <button type="submit" class="btn-primary">Inscription</button>
+        </div>
+        <div class="form-row submit-row">
+          <button type="submit" class="btn-primary btn-transparent">Vous avez déjà un compte
+            ?
+            Connectez-vous</button>
+      </form>
+    </div>
+  </section>
 
 
 
