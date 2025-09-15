@@ -76,7 +76,36 @@
                     manquer.
                     Ne manquez pas de goûter au "Hangi", un repas traditionnel cuit sous terre, qui offre une
                     expérience culinaire unique et savoureuse. </p>
-                <img width="300" src="../assets/images/hangi.jpg" alt="Plat traditionnel Hangi">
+
+                <!-- Galerie de gastronomie -->
+                <div class="food-gallery">
+                    <div class="gallery-item">
+                        <img src="../assets/images/hangi.jpg" alt="Plat traditionnel Hangi">
+                        <div class="gallery-caption">Hangi - Repas traditionnel cuit sous terre</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../assets/images/pavlova.jpg" alt="Pavlova dessert">
+                        <div class="gallery-caption">Pavlova - Dessert emblématique</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../assets/images/fish and chips.jpg" alt="Fish and Chips">
+                        <div class="gallery-caption">Fish & Chips - Spécialité de fruits de mer</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../assets/images/vins.jpg" alt="Vins néo-zélandais">
+                        <div class="gallery-caption">Vins de renommée mondiale</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../assets/images/boil-up.jpg" alt="Boil-Up">
+                        <div class="gallery-caption">Boil-Up - Plat traditionnel maori</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../assets/images/rewenas.jpg" alt="Pain Rewena">
+                        <div class="gallery-caption">Rewena - Pain traditionnel maori</div>
+                    </div>
+                </div>
+            </div>
+            </div>
 
             </div>
         </section>
@@ -237,6 +266,30 @@
         </div>
         <div class="footer-credits">© 2025 Super-Voyage — Explorez le monde avec nous.</div>
     </footer>
+
+    <!-- Bouton retour en haut -->
+    <button id="backToTop" class="back-to-top" onclick="scrollToTop()">
+        <span>↑</span>
+    </button>
+
+    <script>
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Afficher/masquer le bouton selon la position de scroll
+        window.addEventListener('scroll', function () {
+            const backToTopButton = document.getElementById('backToTop');
+            if (window.pageYOffset > 300) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+    </script>
 
 </body>
 
