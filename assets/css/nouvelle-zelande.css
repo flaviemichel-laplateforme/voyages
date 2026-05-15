@@ -9,28 +9,67 @@ body {
     min-height: 100vh;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Smooth scroll and offset for in-page anchors to avoid header overlap */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Ensure sections with ids are visible below the header when navigating via anchor */
+section[id],
+div[id] {
+    scroll-margin-top: 220px; /* header height (195px) + small offset */
+}
+
+/* Styles partagés pour les sections / cartes afin d'éviter les répétitions */
+.section-card-shared,
+.container1,
+.revenu-bien-etre,
+    /* styles communs extraits vers .section-card-shared */
+.sectionTableau2,
+.informations {
+    border-radius: 15px;
+    padding: 24px;
+    margin: 24px 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: calc(100% - 24px);
+}
+
+/* If any pseudo-elements add visual overlays, ensure they don't block clicks */
+.section-card-shared::before,
+.section-card-shared::after,
+.container1::before,
+.container1::after {
+    pointer-events: none;
+}
+
 /* CONTAINER 1 PRESENTATION */
 
 .container1 {
     background-image: url('../images/drapeaunouvellezelande.jpg');
 
     border-radius: 15px;
-    padding: 40px;
-    margin: 50px auto;
+    padding: 24px;
+    margin: 20px 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     text-align: center;
 }
 
 .container1 h1 {
     color: #ffffff;
-    font-size: 3em;
-    margin-bottom: 20px;
+    font-size: 2em;
+    margin-bottom: 16px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .container1 p {
     color: #ffffff;
-    font-size: 1.2em;
+    font-size: 1em;
     line-height: 1.6;
     margin: 0;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
@@ -40,12 +79,12 @@ body {
 
 section:nth-child(2) {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 20px;
-    margin: 50px auto;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin: 32px auto;
     max-width: 1200px;
-    padding: 0 20px;
+    padding: 0 12px;
 }
 
 .container2,
@@ -54,12 +93,11 @@ section:nth-child(2) {
 .container5,
 .container6,
 .container7 {
-    flex: 1;
-    min-width: 280px;
-    max-width: 300px;
+    flex: none;
+    width: min(100%, 360px);
     background: rgba(255, 255, 255, 0.9);
     border-radius: 15px;
-    padding: 30px;
+    padding: 22px;
     text-align: center;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -107,7 +145,7 @@ section:nth-child(2) {
 .container6 h2,
 .container7 h2 {
     color: #333;
-    font-size: 1.8em;
+    font-size: 1.4em;
     margin-bottom: 15px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
@@ -119,15 +157,33 @@ section:nth-child(2) {
 .container6 p,
 .container7 p {
     color: #555;
-    font-size: 1em;
+    font-size: 0.98em;
     line-height: 1.5;
     margin: 0;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
+    .container1 {
+        padding: 40px;
+        margin: 50px auto;
+    }
+
+    .container1 h1 {
+        font-size: 3em;
+        margin-bottom: 20px;
+    }
+
+    .container1 p {
+        font-size: 1.2em;
+    }
+
     section:nth-child(2) {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 20px;
+        margin: 50px auto;
+        padding: 0 20px;
     }
 
     .container2,
@@ -136,8 +192,28 @@ section:nth-child(2) {
     .container5,
     .container6,
     .container7 {
-        max-width: 90%;
-        margin-bottom: 20px;
+        flex: 1;
+        min-width: 280px;
+        max-width: 300px;
+        padding: 30px;
+    }
+
+    .container2 h2,
+    .container3 h2,
+    .container4 h2,
+    .container5 h2,
+    .container6 h2,
+    .container7 h2 {
+        font-size: 1.8em;
+    }
+
+    .container2 p,
+    .container3 p,
+    .container4 p,
+    .container5 p,
+    .container6 p,
+    .container7 p {
+        font-size: 1em;
     }
 }
 
@@ -148,87 +224,72 @@ section:nth-child(2) {
 .revenu-bien-etre {
 
     border-radius: 15px;
-    padding: 40px;
-    margin: 50px 30px;
+    padding: 24px;
+    margin: 24px 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     text-align: center;
-    max-width: calc(100% - 60px);
+    max-width: calc(100% - 24px);
 }
 
 .revenu-bien-etre h2 {
     color: #0e0e0e;
-    font-size: 2em;
-    margin-bottom: 25px;
+    font-size: 1.5em;
+    margin-bottom: 18px;
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
     font-weight: bold;
 }
 
 .revenu-bien-etre p {
-    color: #000000;
-    font-size: 1.2em;
-    line-height: 1.7;
-    margin: 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    text-align: center;
-    padding: 0 20px;
+    /* styles communs extraits vers .section-card-shared */
+    padding: 0 12px;
 }
 
 /* SECTION GASTRONOMIE LOCALE */
 .gastronomie-locale {
 
     border-radius: 15px;
-    padding: 40px;
-    margin: 50px 30px;
+    padding: 24px;
+    margin: 24px 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     text-align: center;
-    max-width: calc(100% - 60px);
+    max-width: calc(100% - 24px);
 }
 
 .gastronomie-locale h2 {
     color: #111010;
-    font-size: 2em;
-    margin-bottom: 25px;
+    font-size: 1.5em;
+    margin-bottom: 18px;
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
     font-weight: bold;
 }
 
 .gastronomie-locale p {
-    color: #181616;
-    font-size: 1.2em;
-    line-height: 1.7;
-    margin: 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    text-align: center;
-    padding: 0 20px;
+    /* styles communs extraits vers .section-card-shared */
+    padding: 0 12px;
 }
 
 /* SECTION MILFORD SOUND */
 .milford-sound {
 
     border-radius: 15px;
-    padding: 40px;
-    margin: 50px 30px;
+    padding: 24px;
+    margin: 24px 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     text-align: center;
-    max-width: calc(100% - 60px);
+    max-width: calc(100% - 24px);
 }
 
 .milford-sound h2 {
     color: #111010;
-    font-size: 2em;
-    margin-bottom: 25px;
+    font-size: 1.5em;
+    margin-bottom: 18px;
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
     font-weight: bold;
 }
 
 .milford-sound p {
-    color: #181616;
-    font-size: 1.2em;
-    line-height: 1.7;
-    margin: 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    text-align: center;
-    padding: 0 20px;
+    /* styles communs extraits vers .section-card-shared */
+    padding: 0 12px;
 }
 
 /* MAORIE CULTURE */
@@ -236,29 +297,24 @@ section:nth-child(2) {
 .maorie-culture {
 
     border-radius: 15px;
-    padding: 40px;
-    margin: 50px 30px;
+    padding: 24px;
+    margin: 24px 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     text-align: center;
-    max-width: calc(100% - 60px);
+    max-width: calc(100% - 24px);
 }
 
 .maorie-culture h2 {
     color: #111010;
-    font-size: 2em;
-    margin-bottom: 25px;
+    font-size: 1.5em;
+    margin-bottom: 18px;
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
     font-weight: bold;
 }
 
 .maorie-culture p {
-    color: #181616;
-    font-size: 1.2em;
-    line-height: 1.7;
-    margin: 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    text-align: center;
-    padding: 0 20px;
+    /* styles communs extraits vers .section-card-shared */
+    padding: 0 12px;
 }
 
 /* ACTIVITES */
@@ -266,29 +322,24 @@ section:nth-child(2) {
 .activites {
 
     border-radius: 15px;
-    padding: 40px;
-    margin: 50px 30px;
+    padding: 24px;
+    margin: 24px 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     text-align: center;
-    max-width: calc(100% - 60px);
+    max-width: calc(100% - 24px);
 }
 
 .activites h2 {
     color: #111010;
-    font-size: 2em;
-    margin-bottom: 25px;
+    font-size: 1.5em;
+    margin-bottom: 18px;
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
     font-weight: bold;
 }
 
 .activites p {
-    color: #181616;
-    font-size: 1.2em;
-    line-height: 1.7;
-    margin: 50px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    text-align: center;
-    padding: 0 20px;
+    /* styles communs extraits vers .section-card-shared */
+    padding: 0 12px;
 }
 
 /* SECTION FORMULAIRE */
@@ -298,14 +349,14 @@ section:nth-child(2) {
     flex-direction: column;
     background-image: url('../images/drapeaunouvellezelande.jpg');
     border-radius: 15px;
-    padding: 40px;
-    margin: 50px auto;
+    padding: 24px;
+    margin: 24px 12px;
     color: white;
     text-align: center;
     margin-bottom: 30px;
     font-size: 1em;
     color: #dee3eb;
-    width: 70%;
+    width: calc(100% - 24px);
     max-width: 800px;
 }
 
@@ -315,20 +366,32 @@ section:nth-child(2) {
     margin: 20px 0;
 }
 
+/* Rendre les tableaux responsives sur petits écrans : permettre scroll horizontal */
+.sectionTableau,
+.sectionTableau2 {
+    -webkit-overflow-scrolling: touch;
+    overflow-x: auto;
+    overflow-y: visible;
+}
+
+.sectionTableau table,
+.sectionTableau2 table {
+    width: 100%;
+    /* allow cells to wrap and tables to size to container; overflow-x on parent will enable scrolling when necessary */
+    table-layout: auto;
+    /* styles communs extraits vers .section-card-shared */
+    font-weight: bold;
+}
+
 .sectionTableau table th,
 .sectionTableau table td {
-    border: 2px solid #ffffff;
-    padding: 15px;
-    text-align: center;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
-    background: rgba(0, 0, 0, 0.5);
-    font-weight: bold;
+    white-space: normal;
+    word-break: break-word;
 }
 
 .sectionTableau table th {
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 1em;
     background: rgba(0, 0, 0, 0.7);
 }
 
@@ -346,7 +409,7 @@ section:nth-child(2) {
 .sectionTableau h2 {
     text-align: center;
     margin-bottom: 20px;
-    font-size: 2em;
+    font-size: 1.5em;
     color: white;
     border-radius: 25px;
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
@@ -369,21 +432,159 @@ section:nth-child(2) {
 .sectionTableau textarea {
     width: 100%;
     padding: 10px;
-    margin-bottom: 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1em;
-}
-
-.sectionTableau button {
-    background-color: #d13017;
-    color: white;
-    border-color: white;
+    /* styles communs extraits vers .section-card-shared */
     padding: 10px 20px;
     border-radius: 5px;
-    font-size: 1.3em;
+    font-size: 1.1em;
     cursor: pointer;
     transition: background-color 0.3s ease;
+}
+
+@media (min-width: 768px) {
+    .revenu-bien-etre {
+        padding: 40px;
+        margin: 50px 30px;
+        max-width: calc(100% - 60px);
+    }
+
+    .revenu-bien-etre h2 {
+        font-size: 2em;
+        margin-bottom: 25px;
+    }
+
+    .revenu-bien-etre p {
+        font-size: 1.2em;
+        padding: 0 20px;
+    }
+
+    .gastronomie-locale {
+        padding: 40px;
+        margin: 50px 30px;
+        max-width: calc(100% - 60px);
+    }
+
+    .gastronomie-locale h2 {
+        font-size: 2em;
+        margin-bottom: 25px;
+    }
+
+    .gastronomie-locale p {
+        font-size: 1.2em;
+        padding: 0 20px;
+    }
+
+    .milford-sound {
+        padding: 40px;
+        margin: 50px 30px;
+        max-width: calc(100% - 60px);
+    }
+
+    .milford-sound h2 {
+        font-size: 2em;
+        margin-bottom: 25px;
+    }
+
+    .milford-sound p {
+        font-size: 1.2em;
+        padding: 0 20px;
+    }
+
+    .maorie-culture {
+        padding: 40px;
+        margin: 50px 30px;
+        max-width: calc(100% - 60px);
+    }
+
+    .maorie-culture h2 {
+        font-size: 2em;
+        margin-bottom: 25px;
+    }
+
+    .maorie-culture p {
+        font-size: 1.2em;
+        padding: 0 20px;
+    }
+
+    .activites {
+        padding: 40px;
+        margin: 50px 30px;
+        max-width: calc(100% - 60px);
+    }
+
+    .activites h2 {
+        font-size: 2em;
+        margin-bottom: 25px;
+    }
+
+    .activites p {
+        font-size: 1.2em;
+        padding: 0 20px;
+    }
+
+    .sectionTableau2 {
+        padding: 18px;
+        margin: 24px auto;
+        color: white;
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 1em;
+        color: #dee3eb;
+        width: 90%;
+        max-width: 500px;
+    }
+
+    .sectionTableau table th {
+        font-size: 1.2em;
+    }
+
+    .sectionTableau h2 {
+        font-size: 2em;
+    }
+
+    .sectionTableau button {
+        font-size: 1.3em;
+    }
+
+    .informations {
+        padding: 40px;
+        margin: 50px 30px;
+        max-width: calc(100% - 60px);
+    }
+
+    .informations h2 {
+        font-size: 2em;
+        margin-bottom: 25px;
+    }
+
+    .informations p {
+        /* styles communs extraits vers .section-card-shared */
+        margin: 40px auto;
+        width: 50%;
+        max-width: 500px;
+    }
+
+    .sectionTableau2 table th,
+    .sectionTableau2 table td {
+        padding: 12px;
+    }
+
+    .sectionTableau2 h2 {
+        font-size: 1.8em;
+    }
+
+    .sectionTableau2 p {
+        padding: 10px 12px;
+    }
+
+    .sectionTableau2 input,
+    .sectionTableau2 textarea {
+        padding: 8px;
+        font-size: 0.9em;
+    }
+
+    .sectionTableau2 button {
+        font-size: 1.1em;
+    }
 }
 
 /* HOVER ZOOM POUR LES IMAGES  */
@@ -423,6 +624,9 @@ img:hover {
     color: inherit;
     text-decoration: none;
     transition: all 0.3s ease;
+    position: relative;
+    z-index: 5; /* above any low-z overlays */
+    pointer-events: auto; /* ensure clickable */
 }
 
 .container2 a:hover,
@@ -440,29 +644,29 @@ img:hover {
 .informations {
 
     border-radius: 15px;
-    padding: 40px;
-    margin: 50px 30px;
+    padding: 24px;
+    margin: 24px 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     text-align: center;
-    max-width: calc(100% - 60px);
+    max-width: calc(100% - 24px);
 }
 
 .informations h2 {
     color: #0e0e0e;
-    font-size: 2em;
-    margin-bottom: 25px;
+    font-size: 1.5em;
+    margin-bottom: 18px;
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
     font-weight: bold;
 }
 
 .informations p {
     color: #000000;
-    font-size: 1.2em;
+    font-size: 1em;
     line-height: 1.7;
     margin: 0;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     text-align: center;
-    padding: 0 20px;
+    padding: 0 12px;
 }
 
 
@@ -473,14 +677,14 @@ img:hover {
     flex-direction: column;
     background-image: url('../images/drapeaunouvellezelande.jpg');
     border-radius: 15px;
-    padding: 25px;
-    margin: 40px auto;
+    padding: 18px;
+    margin: 24px 12px;
     color: white;
     text-align: center;
     margin-bottom: 20px;
     font-size: 1em;
     color: #dee3eb;
-    width: 50%;
+    width: calc(100% - 24px);
     max-width: 500px;
 }
 
@@ -493,7 +697,7 @@ img:hover {
 .sectionTableau2 table th,
 .sectionTableau2 table td {
     border: 2px solid #ffffff;
-    padding: 12px;
+    padding: 10px;
     text-align: center;
     color: white;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
@@ -501,7 +705,7 @@ img:hover {
 
 .sectionTableau2 table th {
     font-weight: bold;
-    font-size: 1.1em;
+    font-size: 1em;
 }
 
 .sectionTableau2 label {
@@ -518,7 +722,7 @@ img:hover {
 .sectionTableau2 h2 {
     text-align: center;
     margin-bottom: 15px;
-    font-size: 1.8em;
+    font-size: 1.4em;
     color: white;
     border-radius: 25px;
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
@@ -534,26 +738,26 @@ img:hover {
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
     background: rgba(0, 0, 0, 0.6);
-    padding: 10px 12px;
+    padding: 8px 10px;
 }
 
 .sectionTableau2 input,
 .sectionTableau2 textarea {
     width: 100%;
-    padding: 8px;
+    padding: 10px;
     margin-bottom: 15px;
     border: none;
     border-radius: 5px;
-    font-size: 0.9em;
+    font-size: 1em;
 }
 
 .sectionTableau2 button {
     background-color: #d13017;
     color: white;
     border-color: white;
-    padding: 8px 16px;
+    padding: 10px 16px;
     border-radius: 5px;
-    font-size: 1.1em;
+    font-size: 1em;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -694,10 +898,10 @@ img:hover {
 /* Galerie de gastronomie */
 .food-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    margin: 30px 0;
-    padding: 0 20px;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin: 20px 0;
+    padding: 0 12px;
 }
 
 .gallery-item {
@@ -716,7 +920,7 @@ img:hover {
 
 .gallery-item img {
     width: 100%;
-    height: 200px;
+    height: 180px;
     object-fit: cover;
     display: block;
 }
@@ -727,7 +931,7 @@ img:hover {
     padding: 12px 15px;
     text-align: center;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 13px;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -740,10 +944,9 @@ img:hover {
     transform: translateY(0);
 }
 
-/* Responsive pour la galerie */
-@media (max-width: 768px) {
+@media (min-width: 480px) {
     .food-gallery {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 15px;
         padding: 0 10px;
     }
@@ -758,13 +961,19 @@ img:hover {
     }
 }
 
-@media (max-width: 480px) {
+@media (min-width: 768px) {
     .food-gallery {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 0 20px;
     }
 
     .gallery-item img {
-        height: 120px;
+        height: 200px;
+    }
+
+    .gallery-caption {
+        font-size: 14px;
+        padding: 12px 15px;
     }
 }

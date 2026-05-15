@@ -325,6 +325,45 @@
             }
         });
     </script>
+</body>
+
+    <!-- Fallback JS pour ancres : scroll calculé en tenant compte du header -->
+    <script>
+        (function () {
+            const header = document.querySelector('header');
+            const headerHeight = header ? header.offsetHeight : 195;
+
+            function scrollToId(id) {
+                const target = document.getElementById(id);
+                if (!target) return;
+                const rect = target.getBoundingClientRect();
+                const top = rect.top + window.pageYOffset - headerHeight - 10;
+                window.scrollTo({ top: top, behavior: 'smooth' });
+                try {
+                    target.setAttribute('tabindex', '-1');
+                    target.focus({ preventScroll: true });
+                } catch (e) {}
+            }
+
+            document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+                a.addEventListener('click', function (e) {
+                    const href = this.getAttribute('href');
+                    if (!href || href === '#') return;
+                    const id = href.slice(1);
+                    const target = document.getElementById(id);
+                    if (target) {
+                        e.preventDefault();
+                        scrollToId(id);
+                        if (history.pushState) {
+                            history.pushState(null, '', '#' + id);
+                        } else {
+                            location.hash = '#' + id;
+                        }
+                    }
+                }, { passive: true });
+            });
+        })();
+    </script>
 
 </body>
 
